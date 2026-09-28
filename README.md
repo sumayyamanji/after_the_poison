@@ -2,7 +2,7 @@
 
 Tabular Q-learning after finite-budget reward poisoning: epsilon-greedy, softmax and a UCB-style selector. The attacker is an independently reconstructed and adapted FAA, with a documented demotion-sign choice, per-step cap and cumulative budget. This is not the original authors' code.
 
-**Start here:** the saved dissertation figures are in [`publication/figures`](publication/figures). [FIGURE_INDEX.md](FIGURE_INDEX.md) links each figure to its exact data and script. You do not need to rerun the experiments to regenerate the figures.
+**Start here:** the saved dissertation figures are in [`publication/figures`](publication/figures). [FIGURE_INDEX.md](FIGURE_INDEX.md) links each figure to its exact data and script. 
 
 ## What is included
 
@@ -35,7 +35,7 @@ Outputs are written under `outputs/`, keeping the supplied evidence unchanged. C
 
 ## Four different reproduction tasks
 
-**1. Regenerate figures from saved data (quick; no simulations):**
+**1. Regenerate figures:**
 
 ```powershell
 python reproduce.py figures
@@ -80,18 +80,6 @@ python reproduce.py sweep
 
 It searches for exact integer crossing times and skips unchanged waiting periods; it does not simulate an astronomically long wait one step at a time.
 
-## What was checked when assembling this package
-
-- All 7,212 uploaded chain paired records are present, unique, readable and match the expected configurations.
-- The four core chain simulation files match the hashes in both uploaded manifests.
-- Exported attainment, expenditure, terminal errors, cutoff status, event times and phase totals agree with the raw arm records within numerical tolerance.
-- All 12 selected independent chain replays pass. These check the learner dynamics using recorded reward changes, not an independent implementation of FAA's navigation optimisation.
-- All terminal jobs are accounted for, their code hash matches, and completed event times/spending match the saved export.
-- The 36-row chain plotting table rebuilds exactly from the saved reports.
-- All figure scripts execute, the native TikZ diagram compiles, and the 32-condition count sweep reproduces the saved CSV exactly.
-- The existing 35 unit tests pass.
-
-The original runtime versions are preserved in the manifests; the assembly-check environment is recorded in `provenance/PACKAGE_VALIDATION.json`.
 
 ## Folder guide
 
@@ -104,4 +92,3 @@ The original runtime versions are preserved in the manifests; the assembly-check
 - `writing/`: the previously delivered concise dissertation PDF/Overleaf ZIP, reattached unchanged (full ZIP). Later copy-and-paste edits, including the proposed revised benefit paragraph, have **not** been silently inserted.
 - `outputs/`: generated files, not included in the archive or Git history.
 
-For sharing or publishing, see [SHARING.md](SHARING.md). 
