@@ -13,3 +13,4 @@ writing/
 .DS_Store
 Thumbs.db
 provenance/
+verify_records.py
