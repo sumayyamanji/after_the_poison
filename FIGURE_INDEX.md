@@ -1,6 +1,4 @@
-# Dissertation figure → saved data → code
-
-Figure numbers refer to the concise dissertation included in `writing/`. Use its LaTeX labels if numbering changes. The authoritative supplied files are below; every row also has a reproducible route.
+# Dissertation figure -> saved data->  code
 
 | Figure | Correct saved file | Input | Regeneration |
 |---|---|---|---|
@@ -17,9 +15,8 @@ Figure numbers refer to the concise dissertation included in `writing/`. Use its
 
 ## One command for the Python figures
 
-`python reproduce.py figures` stages a copy of the plotting workspace and regenerates the figures above, without changing the originals. Add `--latex` for the current native diagram. The Python diagram generated without TeX is an alternative rendering of the setup, not the exact TikZ layout.
+`python reproduce.py figures` stages a copy of the plotting workspace and regenerates the figures above. Add `--latex` for the current native diagram. The Python diagram generated without TeX is an alternative rendering of the setup, not the exact TikZ layout.
 
-Historical debug-title replay PNGs remain in the original report exports for provenance. For the dissertation use the PDF or `_readable.png` files identified above.
 
 ## Rebuilding the figure inputs
 
@@ -29,17 +26,3 @@ Historical debug-title replay PNGs remain in the original report exports for pro
 python reproduce.py figures --inputs outputs/rebuilt_inputs --out outputs/from_rebuilt_inputs
 ```
 
-The terminal empirical curves are recorded survival checkpoints, not invented individual event times or interpolated empirical curves. Exact event times are also available in the terminal raw records. The plotting script checks 12 curve/condition combinations against the saved theoretical and event-summary values.
-
-## Tables
-
-- Table 5.1: terminal summary plus the explicit confirmation-window convention in the text.
-- Tables 5.2–5.3 and Table 6.1's empirical references: combined condition table and the underlying original/audit reports.
-- Full count-sweep table: `publication/data/ucb_count_sweep/complete_table.tex` and `summary.csv`.
-- Methods settings and theoretical tables are declared/derived content, not new empirical runs.
-
-## Clocks and interpretation
-
-Original multistep reports measure recovery from the end of the 500-step attack period. Audits measure first recovery from immediately after the last nonzero reward change. Reward comparisons retain the fixed attack/clean windows. These are intentional differences; do not substitute a similarly named column from the other report.
-
-The upper-right panels of Figures 5.5/5.6 follow Right at S0, chosen because it has the largest error immediately after the last reward change. In Run B the entry still wrong at the horizon is Left; it is not the entry plotted in that upper-right panel.
