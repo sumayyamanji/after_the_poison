@@ -3,9 +3,11 @@
 
 ## Statistical and computational details
 
-Original chain settings: 300 seeds per stochastic condition and one deterministic UCB trajectory per condition. Initial counts 1/100 are prescribed values, not actual pretraining. The terminal validation has 300 stochastic seeds and deterministic UCB cases, with two impossible conditional branch requests explicitly recorded as skipped.
+Original chain settings: 300 seeds per stochastic condition and one deterministic UCB trajectory per condition. Initial counts 1/100. The terminal validation has 300 stochastic seeds and deterministic UCB cases. 
 
-For chain analysis the original report script uses bootstrap seed 773; the audit uses 7735. Each uses 1,000 bootstrap draws. These are marginal intervals. Point estimates, random bootstrap intervals and rendered image pixels have different reproducibility requirements. 
+For chain analysis the original report script uses bootstrap seed 773; the audit uses 7735. Each uses 1,000 bootstrap draws. 
+
+Point estimates, random bootstrap intervals and rendered image pixels have different reproducibility requirements. 
 
 Original chain manifests report Python 3.14.6 and NumPy 2.5.2. The terminal validation reports Python 3.12.14 and NumPy 2.3.5. 
 
