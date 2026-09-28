@@ -2,7 +2,7 @@
 __pycache__/
 *.pyc
 outputs/
-raw_archives/
+
 original_exports/
 writing/
 *.aux
@@ -12,5 +12,3 @@ writing/
 *.fdb_latexmk
 .DS_Store
 Thumbs.db
-provenance/
-verify_records.py

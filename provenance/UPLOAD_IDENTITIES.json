@@ -1,0 +1,42 @@
+{
+  "controlled_records.zip": {
+    "bytes": 14086185,
+    "sha256": "4cab25a0b76f6f5c50001dd76e8017e5eb0eee16b815889ed220fa241b6a4eca"
+  },
+  "controlled_records_manifest.json": {
+    "bytes": 1291,
+    "sha256": "a27accc1f592d166963f350e32b62c93886b7e8577e78b8e83e48776fcc6973a"
+  },
+  "start0_records.zip": {
+    "bytes": 15531781,
+    "sha256": "2ce6a15c81641b3b8002be1509b82f65655c33c059df279cc5d69ede9fe9bd2e"
+  },
+  "start0_manifest.json": {
+    "bytes": 1307,
+    "sha256": "9c8b66fc0c9bee224fda8791b461eb0af1add0086fd3c5096d1033158d852eb5"
+  },
+  "warmup_01.zip": {
+    "bytes": 2517300,
+    "sha256": "aa41c37679210dd1fa6985cc5797b53c595c308778d94b945e15d152cc957b60"
+  },
+  "start0_audit_01(1).zip": {
+    "bytes": 1433862,
+    "sha256": "17db898a09542256650160cd70a78bcbd6e2b7b5c961e36aff0f9337279eee8f"
+  },
+  "controlled_audit_01(2).zip": {
+    "bytes": 1555691,
+    "sha256": "e5f50a36a0fa49c5963f544aff41c365da4e6e8c037e82fe0723ae65fc961713"
+  },
+  "my_multistep_start0_01(1).zip": {
+    "bytes": 3025075,
+    "sha256": "08b9094f61bf903c2b9861a338a2e4587ebe20067d3e61c8e4b21d86c3aa0b0e"
+  },
+  "my_multistep_controlled_01(1).zip": {
+    "bytes": 3834387,
+    "sha256": "ea3ceec6550eb5f9fddf67005b17ab3b794b438abaf22c66d7e0e5d7466b88ff"
+  },
+  "my_multistep_01(1).zip": {
+    "bytes": 2190508,
+    "sha256": "402299fa5bab4ee73713b7c0f2cbe96ce62bb661f1dd8a168f38b12c9bb77161"
+  }
+}

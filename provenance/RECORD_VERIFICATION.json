@@ -1,0 +1,26 @@
+{
+  "controlled": {
+    "expected": 3606,
+    "valid_unique_records": 3606,
+    "matched_original_arm_rows": 7212,
+    "core_code_hashes_match": true,
+    "budget_logs_checked": true,
+    "independent_replays": 6
+  },
+  "start0": {
+    "expected": 3606,
+    "valid_unique_records": 3606,
+    "matched_original_arm_rows": 7212,
+    "core_code_hashes_match": true,
+    "budget_logs_checked": true,
+    "independent_replays": 6
+  },
+  "terminal_validation": {
+    "expected": 2404,
+    "completed_pairs": 2402,
+    "skipped_impossible_branches": 2,
+    "code_hash_matches": true,
+    "events_match_saved_export": true
+  },
+  "scope": "Archive identity, completeness, report alignment and budgets verified; optional selected replay independently checks learner dynamics. Not a fresh full simulation rerun or independent FAA planner verification."
+}
