@@ -15,7 +15,7 @@
 
 ## One command for the Python figures
 
-`python reproduce.py figures` stages a copy of the plotting workspace and regenerates the figures above. Add `--latex` for the current native diagram. The Python diagram generated without TeX is an alternative rendering of the setup, not the exact TikZ layout.
+`python reproduce.py figures` stages a copy of the plots and regenerates the figures above. Add `--latex` for the current native diagram. The Python diagram generated without TeX is an alternative rendering, not the exact TikZ layout.
 
 
 ## Rebuilding the figure inputs
