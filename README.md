@@ -4,19 +4,19 @@ Tabular Q-learning after finite-budget reward poisoning: epsilon-greedy, softmax
 
 The saved dissertation figures are in [`publication/figures`](publication/figures). [FIGURE_INDEX.md](FIGURE_INDEX.md) links each figure to its exact data and script. 
 
-## What is included
 
-| Experiment | Included evidence | Status |
-|---|---|---|
-| Controlled chain, start/reset S2 | Matching source/configuration, raw archive, original report, audit and replay traces | All 3,606 paired records |
-| Controlled chain, start/reset S0 | Matching source/configuration, raw archive, original report, audit and replay traces | All 3,606 paired records |
-| Terminal theory validation | Source/configuration, raw archive, summary, survival checkpoints | 2,402 completed pairs and 2 explicitly skipped impossible branch requests; all 2,404 jobs accounted for |
-| Deterministic UCB count sweep | Source, 32 exact per-condition checkpoints, tables and plots | Complete, including small-gap extension |
-| Earlier terminal warm-up | Exported report/summary and plots | 16,016 pairs reported |
-| Earlier chain warm-up | Exported report, per-run summary and plots | 1,803 pairs reported |
+## Repository layout
 
-The two chain audits reanalyse the original chain experiments. Every paired record contains an attacked run and a clean comparison run.
-
+- `simulation`: rerun and analysis scripts for the experiments
+- `publication`: figure sources, exported data, and plotting code
+- `saved_reports`: saved original and audit reports used as bundled evidence
+- `manifests`: experiment manifests and metadata
+- `raw_archives`: zipped raw records needed for reanalysis and verification
+- `provenance`: provenance/trace metadata for auditability
+- `outputs`: generated outputs from reproduction runs
+- `reproduce.py`: main entry point for figures, reanalysis, reruns, and verification
+- `rebuild_inputs.py`: rebuilds plotting inputs from saved reports
+- `verify_records.py`: verifies archive integrity, settings, and replay values
 
 ## Install
 
@@ -43,7 +43,16 @@ python reproduce.py figures
 Open `outputs/figure_rebuild/figures/`. To compile the native TikZ Figure 3.1 as well, use `--latex` and a fresh output directory. This requires `pdflatex` on your PATH. 
 
 
-**2. Rebuild the statistical analysis from the raw records (no new learning simulations, except selected independent replay checks):**
+
+**2. Check the original raw records and selected independent replays:** 
+
+```powershell
+python reproduce.py verify --replay
+```
+Checks all job IDs/settings, original exported arm results, audit expenditure/reward values, reward-change caps and code hashes. Independently replays the lowest-seed C=3 pair in each chain condition: 12 representative pairs. The result is saved to `outputs/record_verification.json`.
+
+
+**3. Rebuild the statistical analysis from the raw records (no new learning simulations, except selected independent replay checks):**
 
 ```powershell
 python reproduce.py reanalyse
@@ -56,7 +65,7 @@ The first command expands the supplied archives under `outputs/raw/` and runs th
 A figure rebuild using `--inputs` replaces the five chain CSV inputs; terminal and count-sweep inputs remain the supplied reference inputs. To replace terminal inputs too, use the procedure in [REPRODUCIBILITY.md](REPRODUCIBILITY.md).
 
 
-**3. Run the learning experiments again from scratch:**
+**4. Run the learning experiments again from scratch:**
 
 ```powershell
 python reproduce.py rerun --experiment controlled --dry-run
@@ -75,14 +84,22 @@ python reproduce.py sweep
 
 It searches for exact integer crossing times and skips unchanged waiting periods.
 
+
 ---
 
-Note:
+## Appendix:
 
-To check the original raw records and selected independent replays, this requires the full ZIP. This is **available upon request**. 
+**What is included:**
 
-```powershell
-python reproduce.py verify --replay
-```
-Checks all job IDs/settings, original exported arm results, audit expenditure/reward values, reward-change caps and code hashes. Independently replays the lowest-seed C=3 pair in each chain condition: 12 representative pairs. The result is saved to `outputs/record_verification.json`.
+| Experiment | Included evidence | Status |
+|---|---|---|
+| Controlled chain, start/reset S2 | Matching source/configuration, raw archive, original report, audit and replay traces | All 3,606 paired records |
+| Controlled chain, start/reset S0 | Matching source/configuration, raw archive, original report, audit and replay traces | All 3,606 paired records |
+| Terminal theory validation | Source/configuration, raw archive, summary, survival checkpoints | 2,402 completed pairs and 2 explicitly skipped impossible branch requests; all 2,404 jobs accounted for |
+| Deterministic UCB count sweep | Source, 32 exact per-condition checkpoints, tables and plots | Complete, including small-gap extension |
+| Earlier terminal warm-up | Exported report/summary and plots | 16,016 pairs reported |
+| Earlier chain warm-up | Exported report, per-run summary and plots | 1,803 pairs reported |
+
+The two chain audits reanalyse the original chain experiments. Every paired record contains an attacked run and a clean comparison run.
+
 
