@@ -1,0 +1,34 @@
+[
+  {
+    "figure": "ucb_state_access",
+    "last_changed_reward": 113,
+    "clean_followup": 5387,
+    "entry": [
+      0,
+      1
+    ],
+    "S0_updates": [
+      1,
+      1
+    ],
+    "final_error": 0.2682266399999999,
+    "combined_loss": -14.299999999999997,
+    "series_source": "unchanged replay CSV; q_before and sup_error_after checked at every transition"
+  },
+  {
+    "figure": "ucb_action_access",
+    "last_changed_reward": 30,
+    "clean_followup": 5470,
+    "entry": [
+      0,
+      1
+    ],
+    "S0_updates": [
+      0,
+      1824
+    ],
+    "final_error": 0.059500000000001274,
+    "combined_loss": -13.199999999999998,
+    "series_source": "unchanged replay CSV; q_before and sup_error_after checked at every transition"
+  }
+]

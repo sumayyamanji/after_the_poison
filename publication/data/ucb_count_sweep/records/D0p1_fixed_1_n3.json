@@ -1,0 +1,94 @@
+{
+  "settings": {
+    "alpha": "0.9",
+    "gamma": "0.9",
+    "beta": "1",
+    "rho": "0.05",
+    "true_rewards": [
+      "1",
+      "0"
+    ],
+    "counts_are": "post_attack",
+    "base_only": false,
+    "check_limit": 100000,
+    "code_sha256": "88975bb6f7d1b86fb42aa04cc1f8bff7414831107018ca40a2e2ceaa2a7b8358"
+  },
+  "result": {
+    "n_a": 3,
+    "n_c": 1,
+    "regime": "fixed_1",
+    "D": "0.1",
+    "range": "requested",
+    "W": "4",
+    "T_rho": "5",
+    "T_minus_W": "1",
+    "predicted_log_W": "0.03",
+    "observed_log_W": "1.3862943611198906188344642429163531361510002687205",
+    "log_T_rho": "1.6094379124341003746007593332261876395256013542685",
+    "asymptotic_ratio": "46.209812037329687294482141430545104538366675624017",
+    "ratio_error": "45.20981203732968729448214143",
+    "intervention_cost": "1.2222222222222222222222222222222222222222222222222",
+    "boundary_certificate": {
+      "precision": 60,
+      "evaluations": 7,
+      "left": [
+        "-0.1",
+        "-0.1"
+      ],
+      "right": [
+        "0.011541167857256247821777255045233503893102492044429314707384",
+        "0.011541167857256247821777255045233503893102492044429314707407"
+      ]
+    },
+    "post_revisit_trace": [
+      {
+        "time": "4",
+        "action": 0,
+        "counts": [
+          "4",
+          "4"
+        ],
+        "q_before": [
+          "-0.1",
+          "0"
+        ],
+        "q_after": [
+          "0.89",
+          "0"
+        ],
+        "sup_error": "0.11",
+        "score_difference_bounds": [
+          "0.011541167857256247821777255045233503893102492044429314707384",
+          "0.011541167857256247821777255045233503893102492044429314707407"
+        ]
+      },
+      {
+        "time": "5",
+        "action": 0,
+        "counts": [
+          "5",
+          "4"
+        ],
+        "q_before": [
+          "0.89",
+          "0"
+        ],
+        "q_after": [
+          "0.989",
+          "0"
+        ],
+        "sup_error": "0.011",
+        "score_difference_bounds": [
+          "0.89",
+          "0.89"
+        ]
+      }
+    ],
+    "independent_simulation": {
+      "status": "passed",
+      "first_revisit": 4,
+      "q_recovery": 5,
+      "minimum_float_score_margin": 0.01154116785725623
+    }
+  }
+}

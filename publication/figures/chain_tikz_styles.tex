@@ -1,0 +1,17 @@
+% Figure 3.1: shared colours and styles.
+\definecolor{rightblue}{RGB}{0,114,178}
+\definecolor{leftorange}{RGB}{213,94,0}
+\definecolor{notepurple}{RGB}{117,80,160}
+\definecolor{goalgreen}{RGB}{0,128,100}
+\definecolor{boxgray}{RGB}{238,241,246}
+\definecolor{boxgreen}{RGB}{228,242,232}
+\definecolor{barblue}{RGB}{226,236,247}
+\tikzset{
+  chainstate/.style={draw=black!75,thick,rounded corners=3pt,fill=boxgray,
+    minimum width=1.5cm,minimum height=.85cm,font=\sffamily},
+  chaingoal/.style={chainstate,fill=boxgreen},
+  chainarr/.style={-{Stealth[length=2.5mm]},thick},
+  chainlbl/.style={font=\sffamily\small},
+  chainnote/.style={font=\sffamily\footnotesize,align=left},
+  chaintitle/.style={font=\sffamily\bfseries,anchor=west}
+}

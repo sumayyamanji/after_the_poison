@@ -1,0 +1,43 @@
+\begingroup\small
+\setlength{\tabcolsep}{3.5pt}
+\begin{longtable}{llrrrrrrrr}
+\caption[Complete controlled chain conditions]{Controlled chain conditions. Start is also the reset state; Count is the initial count per entry and $C$ the allowance. Attain counts first target successes within 500 steps; Retain counts target success at step 500. Spent is mean absolute expenditure. Q mean is the time after the last changed reward to error at most .05 in every entry, capped at 5,000. Cens. counts runs without that crossing by 5,000. Loss is mean clean-minus-attacked original reward over all 5,500 steps. Each stochastic row has 300 pairs; each UCB row has one.}\label{tab:allconditions}\\
+\toprule Start & Rule & Count & $C$ & Attain & Retain & Spent & Q mean & Cens. & Loss\\\midrule\endfirsthead
+\toprule Start & Rule & Count & $C$ & Attain & Retain & Spent & Q mean & Cens. & Loss\\\midrule\endhead
+S0 & $\varepsilon$-greedy & 1 & 1 & 300 & 0 & 1.00 & 57.2 & 0 & 1.94\\
+S2 & $\varepsilon$-greedy & 1 & 1 & 281 & 31 & 0.99 & 3776.0 & 168 & 12.07\\
+S0 & Softmax & 1 & 1 & 300 & 0 & 1.00 & 17.9 & 0 & 0.32\\
+S2 & Softmax & 1 & 1 & 172 & 0 & 1.00 & 375.6 & 0 & -7.08\\
+S0 & UCB & 1 & 1 & 1 & 0 & 1.00 & 27.0 & 0 & 0.00\\
+S2 & UCB & 1 & 1 & 1 & 0 & 1.00 & 5000.0 & 1 & -2.20\\
+S0 & $\varepsilon$-greedy & 100 & 1 & 300 & 0 & 1.00 & 57.2 & 0 & 1.94\\
+S2 & $\varepsilon$-greedy & 100 & 1 & 281 & 31 & 0.99 & 3776.0 & 168 & 12.07\\
+S0 & Softmax & 100 & 1 & 300 & 0 & 1.00 & 17.9 & 0 & 0.32\\
+S2 & Softmax & 100 & 1 & 172 & 0 & 1.00 & 375.6 & 0 & -7.08\\
+S0 & UCB & 100 & 1 & 1 & 0 & 1.00 & 5000.0 & 1 & -16.50\\
+S2 & UCB & 100 & 1 & 1 & 0 & 1.00 & 5000.0 & 1 & 14.30\\
+S0 & $\varepsilon$-greedy & 1 & 3 & 300 & 0 & 3.00 & 58.1 & 0 & 6.31\\
+S2 & $\varepsilon$-greedy & 1 & 3 & 300 & 84 & 2.71 & 3981.5 & 178 & 24.56\\
+S0 & Softmax & 1 & 3 & 300 & 0 & 3.00 & 26.8 & 0 & 1.19\\
+S2 & Softmax & 1 & 3 & 277 & 121 & 2.73 & 575.0 & 0 & -12.83\\
+S0 & UCB & 1 & 3 & 1 & 0 & 3.00 & 10.0 & 0 & 0.00\\
+S2 & UCB & 1 & 3 & 1 & 1 & 1.36 & 5000.0 & 1 & -14.30\\
+S0 & $\varepsilon$-greedy & 100 & 3 & 300 & 0 & 3.00 & 58.1 & 0 & 6.31\\
+S2 & $\varepsilon$-greedy & 100 & 3 & 300 & 84 & 2.71 & 3981.5 & 178 & 24.56\\
+S0 & Softmax & 100 & 3 & 300 & 0 & 3.00 & 26.8 & 0 & 1.19\\
+S2 & Softmax & 100 & 3 & 277 & 121 & 2.73 & 575.0 & 0 & -12.83\\
+S0 & UCB & 100 & 3 & 1 & 0 & 3.00 & 5000.0 & 1 & -13.20\\
+S2 & UCB & 100 & 3 & 1 & 1 & 2.17 & 5000.0 & 1 & 23.10\\
+S0 & $\varepsilon$-greedy & 1 & 10 & 300 & 0 & 10.00 & 46.7 & 0 & 21.38\\
+S2 & $\varepsilon$-greedy & 1 & 10 & 300 & 237 & 5.68 & 4080.8 & 185 & 45.15\\
+S0 & Softmax & 1 & 10 & 300 & 0 & 10.00 & 28.5 & 0 & 4.59\\
+S2 & Softmax & 1 & 10 & 299 & 299 & 3.60 & 746.4 & 0 & -18.63\\
+S0 & UCB & 1 & 10 & 1 & 0 & 10.00 & 24.0 & 0 & 0.00\\
+S2 & UCB & 1 & 10 & 1 & 1 & 1.36 & 5000.0 & 1 & -14.30\\
+S0 & $\varepsilon$-greedy & 100 & 10 & 300 & 0 & 10.00 & 46.7 & 0 & 21.38\\
+S2 & $\varepsilon$-greedy & 100 & 10 & 300 & 237 & 5.68 & 4080.8 & 185 & 45.15\\
+S0 & Softmax & 100 & 10 & 300 & 0 & 10.00 & 28.5 & 0 & 4.59\\
+S2 & Softmax & 100 & 10 & 299 & 299 & 3.60 & 746.4 & 0 & -18.63\\
+S0 & UCB & 100 & 10 & 1 & 0 & 10.00 & 3.0 & 0 & 0.00\\
+S2 & UCB & 100 & 10 & 1 & 1 & 2.17 & 5000.0 & 1 & 23.10\\
+\bottomrule\end{longtable}\endgroup

@@ -1,0 +1,60 @@
+{
+  "gamma": 0.9,
+  "attack_steps": 40,
+  "post_steps": 150,
+  "confirmation": 20,
+  "q_tolerance": 0.05,
+  "trace_every": 1,
+  "trace_seeds": [
+    0
+  ],
+  "seeds": 3,
+  "rules": [
+    "epsilon_greedy",
+    "softmax",
+    "ucb"
+  ],
+  "learner_defaults": {
+    "alpha": 0.9,
+    "alpha_schedule": "constant",
+    "epsilon": 0.1,
+    "temperature": 0.2,
+    "beta": 1.0
+  },
+  "faa": {
+    "navigation_epsilon": 0.1,
+    "ranking_tolerance": 1e-10
+  },
+  "budgets": [
+    0.0,
+    3.0
+  ],
+  "delta_limits": [
+    3.0
+  ],
+  "margins": [
+    0.01
+  ],
+  "sign_conventions": [
+    "corrected"
+  ],
+  "designs": [
+    {
+      "name": "smoke_chain3",
+      "environment": {
+        "kind": "chain",
+        "n_states": 3,
+        "start": 2,
+        "step_reward": -0.1,
+        "goal_reward": 1.0,
+        "slip": 0.0
+      },
+      "targets": "leftmost_only",
+      "initialization": {
+        "mode": "warmup",
+        "q0": 0.0,
+        "steps": 30
+      }
+    }
+  ]
+}

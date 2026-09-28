@@ -1,0 +1,13 @@
+{
+  "zoom": 200,
+  "bootstrap_replicates": 1000,
+  "bootstrap_seed": 773,
+  "interval_level": 0.95,
+  "proportion_interval": "Wilson, marginal",
+  "mean_interval": "paired-run or single-arm percentile bootstrap, marginal",
+  "deterministic_intervals": null,
+  "trace_selection": "smallest saved seed, budget nearest 3",
+  "analysis_source_sha256": "ee408c0df54f32d6a3bffb61f7cf59ca7301ee3de8d46cb4277df0f39e2eec61",
+  "numpy_version": "2.5.2",
+  "matplotlib_version": "3.11.1"
+}

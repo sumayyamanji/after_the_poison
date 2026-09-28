@@ -1,0 +1,59 @@
+{
+  "config": {
+    "schema_version": 1,
+    "rewards": [
+      1.0,
+      0.0
+    ],
+    "seeds": 300,
+    "horizon": 2000,
+    "q_tolerance": 0.05,
+    "confirmation_window": 20,
+    "rules": [
+      "epsilon_greedy",
+      "softmax",
+      "ucb"
+    ],
+    "learner_defaults": {
+      "alpha": 0.9,
+      "alpha_schedule": "constant",
+      "epsilon": 0.1,
+      "temperature": 0.2,
+      "beta": 1.0,
+      "omega": 0.75
+    },
+    "designs": [
+      {
+        "name": "controlled",
+        "mode": "controlled",
+        "margins": [
+          0.01,
+          1.0
+        ],
+        "budgets": [
+          3.0
+        ],
+        "delta_limits": [
+          3.0
+        ],
+        "initializations": [
+          {
+            "counts": [
+              100,
+              100
+            ]
+          }
+        ],
+        "branches": [
+          "demotion",
+          "promotion"
+        ]
+      }
+    ]
+  },
+  "simulation_code_hash": "f4550d46cdaa0f726e49f41dd3b72c361f6bf1bab15f305eeb4fa59395bd3757",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "job_count": 2404,
+  "schema_version": 1
+}

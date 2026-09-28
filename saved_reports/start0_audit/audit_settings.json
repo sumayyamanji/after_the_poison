@@ -1,0 +1,10 @@
+{
+  "replay": true,
+  "replay_budget": 3.0,
+  "bootstrap_seed": 7735,
+  "bootstrap_replicates": 1000,
+  "source_sha256": "8feedc5a05c1180628ae90ca250344ffcc02758991c758e9731dd0742aa275ec",
+  "clock": "Immediately after last nonzero reward perturbation; no-poison runs excluded from last-poison metrics",
+  "common_last_poison_horizon": 5000,
+  "numpy": "2.5.2"
+}

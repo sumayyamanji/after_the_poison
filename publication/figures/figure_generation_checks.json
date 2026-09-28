@@ -1,0 +1,161 @@
+{
+  "note": "No experimental reruns. Exact terminal predictions evaluated and matched to saved theory columns.",
+  "settings": {
+    "alpha": 0.9,
+    "gamma": 0.9,
+    "epsilon": 0.1,
+    "tau": 0.2,
+    "beta": 1,
+    "rho": 0.05,
+    "confirmation_observations": 20,
+    "pre_counts": [
+      100,
+      100
+    ],
+    "post_demotion_counts": [
+      101,
+      100
+    ],
+    "C": 3,
+    "Delta": 3,
+    "H": 2000
+  },
+  "inputs": {
+    "terminal_summary.csv": "e25cc59a5e5148a6bcbf7b676e2b5c89fd621c923ffe7b262cd9f2ebb98d14d6",
+    "terminal_survival.csv": "c29ecc67d001791e10616ca657ed5450b3a8c145ce26bce67050c5047991edf5"
+  },
+  "checks": [
+    {
+      "condition_id": "b60383b7a5b2da16",
+      "D": 0.01,
+      "rule": "epsilon_greedy",
+      "metric": "first_revisit",
+      "n": 300,
+      "computed_mean": 20.0,
+      "saved_theory_max_abs_error": 3.885780586188048e-15,
+      "observations_every_steps": 10,
+      "censored": 0
+    },
+    {
+      "condition_id": "f1e49d85f5012fb9",
+      "D": 0.01,
+      "rule": "softmax",
+      "metric": "first_revisit",
+      "n": 300,
+      "computed_mean": 2.0512710963760243,
+      "saved_theory_max_abs_error": 6.370279728937702e-17,
+      "observations_every_steps": 10,
+      "censored": 0
+    },
+    {
+      "condition_id": "0de4bcb23f644c6c",
+      "D": 0.01,
+      "rule": "ucb",
+      "metric": "first_revisit",
+      "n": 1,
+      "computed_mean": 12.0,
+      "saved_theory_max_abs_error": 0.0,
+      "observations_every_steps": 10,
+      "censored": 0
+    },
+    {
+      "condition_id": "b60383b7a5b2da16",
+      "D": 0.01,
+      "rule": "epsilon_greedy",
+      "metric": "q_confirmation",
+      "n": 300,
+      "computed_mean": 40.05263157894737,
+      "saved_theory_max_abs_error": 1.8318679906315083e-15,
+      "observations_every_steps": 10,
+      "censored": 0
+    },
+    {
+      "condition_id": "f1e49d85f5012fb9",
+      "D": 0.01,
+      "rule": "softmax",
+      "metric": "q_confirmation",
+      "n": 300,
+      "computed_mean": 22.06243577699114,
+      "saved_theory_max_abs_error": 3.3306690738754696e-16,
+      "observations_every_steps": 10,
+      "censored": 0
+    },
+    {
+      "condition_id": "0de4bcb23f644c6c",
+      "D": 0.01,
+      "rule": "ucb",
+      "metric": "q_confirmation",
+      "n": 1,
+      "computed_mean": 32.0,
+      "saved_theory_max_abs_error": 0.0,
+      "observations_every_steps": 10,
+      "censored": 0
+    },
+    {
+      "condition_id": "3ac55c0552cf699e",
+      "D": 1.0,
+      "rule": "epsilon_greedy",
+      "metric": "first_revisit",
+      "n": 300,
+      "computed_mean": 20.0,
+      "saved_theory_max_abs_error": 3.885780586188048e-15,
+      "observations_every_steps": 10,
+      "censored": 0
+    },
+    {
+      "condition_id": "a3f6740b7fd7de0d",
+      "D": 1.0,
+      "rule": "softmax",
+      "metric": "first_revisit",
+      "n": 300,
+      "computed_mean": 149.4131591025766,
+      "saved_theory_max_abs_error": 5.218048215738236e-15,
+      "observations_every_steps": 10,
+      "censored": 0
+    },
+    {
+      "condition_id": "7a596586bf7b0d7a",
+      "D": 1.0,
+      "rule": "ucb",
+      "metric": "first_revisit",
+      "n": 1,
+      "computed_mean": null,
+      "saved_theory_max_abs_error": 0.0,
+      "observations_every_steps": 10,
+      "censored": 1
+    },
+    {
+      "condition_id": "3ac55c0552cf699e",
+      "D": 1.0,
+      "rule": "epsilon_greedy",
+      "metric": "q_confirmation",
+      "n": 300,
+      "computed_mean": 40.05263157894737,
+      "saved_theory_max_abs_error": 1.8318679906315083e-15,
+      "observations_every_steps": 10,
+      "censored": 0
+    },
+    {
+      "condition_id": "a3f6740b7fd7de0d",
+      "D": 1.0,
+      "rule": "softmax",
+      "metric": "q_confirmation",
+      "n": 300,
+      "computed_mean": 169.43147474146534,
+      "saved_theory_max_abs_error": 4.218847493575595e-15,
+      "observations_every_steps": 10,
+      "censored": 0
+    },
+    {
+      "condition_id": "7a596586bf7b0d7a",
+      "D": 1.0,
+      "rule": "ucb",
+      "metric": "q_confirmation",
+      "n": 1,
+      "computed_mean": null,
+      "saved_theory_max_abs_error": 0.0,
+      "observations_every_steps": 10,
+      "censored": 1
+    }
+  ]
+}

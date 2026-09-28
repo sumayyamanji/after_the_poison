@@ -1,0 +1,27 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "matplotlib": "3.10.8",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "saved_inputs_rebuilt_match": true,
+  "count_sweep_32_rows_match": true,
+  "figures_regenerated": true,
+  "tikz_compiles": true,
+  "simulation_full_suite_rerun": false,
+  "existing_unit_tests_passed": 35,
+  "runner_dry_runs": {
+    "controlled": 3606,
+    "start0": 3606,
+    "terminal_validation": 2404
+  },
+  "full_raw_statistical_reanalysis_run": false,
+  "regenerated_png_pixel_matches": {
+    "attainment_retention.png": true,
+    "q_survival.png": true,
+    "reward_loss.png": true,
+    "terminal_theory_empirical.png": true,
+    "ucb_count_ratio.png": true,
+    "ucb_state_access_readable.png": true,
+    "ucb_action_access_readable.png": true
+  }
+}

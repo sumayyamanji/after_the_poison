@@ -1,0 +1,70 @@
+% Included within the Figure 3.1 environment; no document wrapper.
+\begingroup
+\setstretch{1}
+% (a) Chain. Each panel uses the same horizontal bounds.
+\begin{tikzpicture}
+  \path[use as bounding box] (0,-2.55) rectangle (13.8,1.9);
+  \node[chaintitle] at (0,1.65) {(a) The chain and the attacker's target};
+  \node[chainstate] (s0) at (1,0) {S0};
+  \node[chainstate] (s1) at (4.6,0) {S1};
+  \node[chainstate] (s2) at (8.2,0) {S2};
+  \node[chaingoal] (g) at (11.8,0) {Goal};
+  \draw[chainarr,rightblue] (s0.north east) to[bend left=35]
+    node[above,chainlbl] {Right / $-0.1$} (s1.north west);
+  \draw[chainarr,rightblue] (s1.north east) to[bend left=35]
+    node[above,chainlbl] {Right / $-0.1$} (s2.north west);
+  \draw[chainarr,rightblue] (s2.north east) to[bend left=35]
+    node[above,chainlbl] {Right / $+1$} (g.north west);
+  \draw[chainarr,leftorange] (s1.south west) to[bend left=35]
+    node[below,chainlbl] {Left / $-0.1$} (s0.south east);
+  \draw[chainarr,leftorange] (s2.south west) to[bend left=35]
+    node[below,chainlbl] {Left / $-0.1$} (s1.south east);
+  \draw[chainarr,leftorange] ([xshift=-.55cm]s0.south)
+    .. controls +(-.3,-1) and +(.3,-1) .. ([xshift=.05cm]s0.south);
+  \node[chainnote,leftorange,anchor=west] at (0,-1.55)
+    {Left: stay at S0 / $-0.1$};
+  \node[chainlbl,goalgreen,below=.25cm of g] {Episode ends};
+  \node[chainlbl,notepurple,anchor=west] at (0,-2.25)
+    {Attacker's target: $Q(\mathrm{S0},\mathrm{Left}) > Q(\mathrm{S0},\mathrm{Right})$};
+\end{tikzpicture}\par\vspace{.7em}
+% (b) Separate experimental reset conditions.
+\begin{tikzpicture}
+  \path[use as bounding box] (0,-1) rectangle (13.8,1.6);
+  \node[chaintitle] at (0,1.35) {(b) Two alternative reset rules};
+  \node[chainlbl,anchor=west] at (0,.8) {Start and reset at S0};
+  \node[chaingoal] (g1) at (1,0) {Goal};
+  \node[chainstate] (r1) at (4.6,0) {S0};
+  \draw[chainarr,notepurple,dashed] (g1) --
+    node[above,chainnote] {New episode} (r1);
+  \node[chainlbl,anchor=west] at (7,.8) {Start and reset at S2};
+  \node[chaingoal] (g2) at (8,0) {Goal};
+  \node[chainstate] (r2) at (11.6,0) {S2};
+  \draw[chainarr,notepurple,dashed] (g2) --
+    node[above,chainnote] {New episode} (r2);
+  \node[chainnote,anchor=north west,text width=13.4cm] at (0,-.65)
+    {A reset starts a new episode; it adds no future-value term to the terminal update.};
+\end{tikzpicture}\par\vspace{.9em}
+% (c) Schematic timing: equal bar widths do not imply equal durations.
+\begin{tikzpicture}
+  \path[use as bounding box] (0,-2.8) rectangle (13.8,2.6);
+  \node[chaintitle] at (0,2.35) {(c) Allowed attack period and measurement clocks};
+  \filldraw[fill=barblue,draw=rightblue,thick] (.3,0) rectangle (6.8,1);
+  \filldraw[fill=boxgreen,draw=goalgreen,thick] (6.8,0) rectangle (13.3,1);
+  \node[chainlbl,align=center] at (3.55,.5) {Reward changes allowed\\500 steps};
+  \node[chainlbl,align=center] at (10.05,.5) {Only unmodified rewards\\5{,}000 further steps};
+  \foreach \x/\t in {.3/0,6.8/500,13.3/{5{,}500}} {
+    \draw (\x,0) -- (\x,-.15);
+    \node[chainlbl,below] at (\x,-.12) {\t};
+  }
+  \node[chainnote,anchor=north east] at (13.3,-.5) {Environment step};
+  \node[chainlbl,notepurple] (lc) at (3.5,1.7) {Example last reward change};
+  \draw[chainarr,notepurple] (lc.south) -- (3.5,1.02);
+  \draw[notepurple,densely dashed] (3.5,0) -- (3.5,-.75);
+  \node[chainnote,notepurple,anchor=north west,text width=13.4cm] at (0,-.9)
+    {Recovery is measured from immediately after the last changed-reward update.};
+  \node[chainnote,anchor=north west,text width=13.4cm] at (0,-1.5)
+    {Reward comparisons use the fixed periods: steps 1--500 and 501--5{,}500.};
+  \node[chainnote,anchor=north west,text width=13.4cm] at (0,-2.1)
+    {Schematic timing, not to scale. The last change can precede step 500 without exhausting the budget.};
+\end{tikzpicture}
+\endgroup
