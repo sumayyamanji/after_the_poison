@@ -1,4 +1,4 @@
-# After the Poison — reproducibility package
+# After the Poison - reproducibility package
 
 Tabular Q-learning after finite-budget reward poisoning: epsilon-greedy, softmax and a UCB-style selector. The attacker is an independently reconstructed and adapted FAA, with a documented demotion-sign choice, per-step cap and cumulative budget. This is not the original authors' code.
 
@@ -91,7 +91,7 @@ It searches for exact integer crossing times and skips unchanged waiting periods
 - All figure scripts execute, the native TikZ diagram compiles, and the 32-condition count sweep reproduces the saved CSV exactly.
 - The existing 35 unit tests pass.
 
-**Not claimed:** a fresh full rerun of all stochastic learning experiments, a bit-for-bit match across arbitrary Python/NumPy versions, or complete raw records for the earlier warm-ups. The original runtime versions are preserved in the manifests; the assembly-check environment is recorded in `provenance/PACKAGE_VALIDATION.json`.
+The original runtime versions are preserved in the manifests; the assembly-check environment is recorded in `provenance/PACKAGE_VALIDATION.json`.
 
 ## Folder guide
 
@@ -104,4 +104,4 @@ It searches for exact integer crossing times and skips unchanged waiting periods
 - `writing/`: the previously delivered concise dissertation PDF/Overleaf ZIP, reattached unchanged (full ZIP). Later copy-and-paste edits, including the proposed revised benefit paragraph, have **not** been silently inserted.
 - `outputs/`: generated files, not included in the archive or Git history.
 
-For sharing or publishing, see [SHARING.md](SHARING.md). No repository or external upload has been created on your behalf.
+For sharing or publishing, see [SHARING.md](SHARING.md). 
